@@ -4,7 +4,7 @@ body {
   background-color: #222831;
 }
 
-  nav {
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +19,55 @@ body {
     justify-content: center;
   }
 
+  .content {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+section {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.foto {
+  width: 9rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:50%;
+}
+
+
+.outer-ring {
+  display: flex;
+  height: 10rem;
+  width: 10rem;
+  background-image: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -999;
+  margin-top: -9.5rem;
+  
+  /*  Rotate  */
+  animation-duration: 2s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {transform:rotate(0deg);}
+  100% {transform:rotate(360deg);}
+}
+
+
+
   a{
     font-size: 18px;
     text-decoration: none;
@@ -26,13 +75,10 @@ body {
     padding: 0.5rem;
 
   }
-  #tsparticles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
+
+  p {
+    font-size: 200%;
+    color: white;
   }
   .blue {
     position: fixed;
@@ -48,6 +94,20 @@ body {
     left: 0px;
     z-index: -10;
   }
+
+  h1 {
+    color: #E8E5E2;
+    font-size: 270%;
+    font-weight:lighter;
+  }
+
+  h2 {
+    color: #E8E5E2;
+    font-size: 200%;
+    font-weight: 100;
+  }
+
+  
 
 
 /** For mobile devices **/
