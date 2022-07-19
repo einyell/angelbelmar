@@ -20,7 +20,6 @@ nav {
   }
 
   .content {
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -31,6 +30,16 @@ section {
   display:flex;
   flex-direction: column;
   text-align: center;
+}
+
+#home{
+  margin-top: 3rem;
+}
+
+#workcards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .foto {
@@ -80,20 +89,6 @@ section {
     font-size: 200%;
     color: white;
   }
-  .blue {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    z-index: -10;
-  }
-
-  .red {
-    position:absolute;
-    top: 45px;
-    bottom: 0px;
-    left: 0px;
-    z-index: -10;
-  }
 
   h1 {
     color: #E8E5E2;
@@ -107,44 +102,58 @@ section {
     font-weight: 100;
   }
 
-  
-
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-    .custom-shape-divider-bottom-1658152750 svg {
-        width: calc(100% + 1.3px);
-        height: 100px;
+    
+    @keyframes rotate {
+    100% {
+    transform: rotate(1turn);
     }
-}
-
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
     }
 
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
+
+    .workcard {
+    position: relative;
+    z-index: 0;
+    width: 16rem;
+    height: 7rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+    background-color: #181123;
+    color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
     }
 
-    .card.highlight-card span {
-      margin-left: 72px;
+    .workcard::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #399953;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#f3ec78, #f3ec78), linear-gradient(#181123, #181123), linear-gradient(#DA70D6, #DA70D6), linear-gradient(#181123, #181123);
+    animation: rotate 5s linear infinite;
+    }
+    .workcard::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background-color: #181123;
+    border-radius: 5px;
     }
 
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
+    span{
+      text-align: center;
+      justify-content: center;
     }
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
 
