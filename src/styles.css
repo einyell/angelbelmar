@@ -1,3 +1,12 @@
+* {
+ margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
 body {
   margin: 0;
   font-family: "Titillium Web";
@@ -6,17 +15,22 @@ body {
 
 nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    min-width: 20rem;
-    display: flex;
+    text-align: center;
     z-index: 999;
     background-color: #525e65;
-    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
-    text-align: center;
-    justify-content: center;
+  }
+  nav li{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    list-style: none;
+    display: inline-block;
+  }
+nav a{
+    font-size: 1rem;
+    text-decoration: none;
+    color:#73CCA8;
+    padding: 0.5rem;
   }
 
   .content {
@@ -26,81 +40,147 @@ nav {
     justify-content: center;
   }
 
-section {
-  display:flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 #home{
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
-#workcards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+h1 {
+  color: #E8E5E2;
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  margin-top: 1rem;
+  color: #E8E5E2;
+  font-size: 1.5rem;
+  font-weight: 100;
 }
 
 .foto {
-  width: 9rem;
+  margin-top: 1rem;
+  width: 8rem;
   height: auto;
   display: flex;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   border-radius:50%;
+  z-index: 1000;
 }
 
+.sameline{
+  display: inline-flex;
+  margin-top: 1rem;
+}
+.text1, .text2 {
+  margin: 0.2rem;
+  display: block;
+}
 
-.outer-ring {
+.discoverButton {
   display: flex;
-  height: 10rem;
-  width: 10rem;
-  background-image: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
-  border-radius: 50%;
+  justify-content: center;
+  width: 100%;
+  color: #E8E5E2;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+}
+
+.box {
+  text-decoration: none;
+  border: 1px solid #E8E5E2;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: #E8E5E2;
+  margin-left: 5rem;
+  margin-right: 5rem;  
+}
+
+.box:hover, .box a:active {
+  transition: 1.2s;
+  background-color: #00ADB5;
+  font-size:1.5rem;
+}
+
+.aboutcard{
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  width: 16rem;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #181123;
+  color: white;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  z-index: -999;
-  margin-top: -9.5rem;
-  
-  /*  Rotate  */
-  animation-duration: 2s;
-  animation-name: rotate;
-  animation-iteration-count: infinite;
+  margin-top: 5rem;
 }
 
-@keyframes rotate {
-  0% {transform:rotate(0deg);}
-  100% {transform:rotate(360deg);}
+.tittle {
+margin-top: 5rem;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.card {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+  margin:auto;
+} 
+
+.logo {
+  max-height: 2.5rem;
+  max-width: auto;
+  vertical-align: middle;
+}
+
+.iconText {
+  margin-top: 1rem;
+  vertical-align: middle;
 }
 
 
 
-  a{
-    font-size: 18px;
-    text-decoration: none;
-    color:#73CCA8;
-    padding: 0.5rem;
+#workcards {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.box2 {
+  width: 3rem;
+  height: 3rem;
+  background-color: red;}
+.box2::before{ content: ''; position: absolute; top: -2px; bottom: -2px; left: -2px; right: -2px; background: #fff; z-index: -1;}
+.box2::after{ content: ''; position: absolute; top: -2px; bottom: -2px; left: -2px; right: -2px; background: #fff; z-index: -1; filter: blur(40px);}
+.box2::before, .box2::after{ background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);}
 
-  }
+
+
+
+
+
+
+
+ 
 
   p {
-    font-size: 200%;
+    font-size: 100%;
     color: white;
   }
 
-  h1 {
-    color: #E8E5E2;
-    font-size: 270%;
-    font-weight:lighter;
-  }
-
-  h2 {
-    color: #E8E5E2;
-    font-size: 200%;
-    font-weight: 100;
-  }
 
     
     @keyframes rotate {
