@@ -18,7 +18,7 @@ nav {
     width: 100%;
     text-align: center;
     z-index: 999;
-    background-color: #525e65;
+    background-color: #2C2E3F;
   }
   nav li{
     margin-top: 0.5rem;
@@ -125,6 +125,17 @@ h2 {
 .tittle {
 margin-top: 5rem;
 }
+.barra {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 16rem;
+  height: 5px;
+  background-color: #525e65;
+  
+}
 
 .row1,
 .row2 {
@@ -132,18 +143,36 @@ margin-top: 5rem;
   margin-top: 2rem;
 }
 
+
 .card {
   justify-content: center;
   text-align: center;
   width: 100%;
   vertical-align: middle;
-  margin:auto;
-} 
+  border-width: 0.05rem;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+
+.card2 {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+}
 
 .logo {
-  max-height: 2.5rem;
+  max-height: 2rem;
   max-width: auto;
+  justify-content: center;
   vertical-align: middle;
+  background-color: red;
 }
 
 .iconText {
@@ -159,15 +188,6 @@ margin-top: 5rem;
   flex-direction: row;
   justify-content: center;
 }
-.box2 {
-  width: 3rem;
-  height: 3rem;
-  background-color: red;}
-.box2::before{ content: ''; position: absolute; top: -2px; bottom: -2px; left: -2px; right: -2px; background: #fff; z-index: -1;}
-.box2::after{ content: ''; position: absolute; top: -2px; bottom: -2px; left: -2px; right: -2px; background: #fff; z-index: -1; filter: blur(40px);}
-.box2::before, .box2::after{ background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);}
-
-
 
 
 
