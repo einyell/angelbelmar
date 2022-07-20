@@ -103,8 +103,24 @@ h2 {
 
 .box:hover, .box a:active {
   transition: 1.2s;
-  background-color: #00ADB5;
+  background-color:rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#90f3b3), color-stop(#90e9f3), color-stop(#909ff3), color-stop(#cc90f3), color-stop(#f390d1), color-stop(#f39a90), color-stop(#f3e590), to(#b8f390)) repeat scroll 0% 0%/200% 200%;
+  background: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
   font-size:1.5rem;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0) -webkit-gradient(linear, left top, right top, from(#90f3b3), color-stop(#90e9f3), color-stop(#909ff3), color-stop(#cc90f3), color-stop(#f390d1), color-stop(#f39a90), color-stop(#f3e590), to(#b8f390)) repeat scroll 0% 0%/200% 200%;
+  background: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
+      background-clip: border-box;
+  color: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.box:hover {
+  color: black;
+  -webkit-animation: GradientAnimation 2s ease infinite;
+  animation: GradientAnimation 2s ease infinite;
 }
 
 .aboutcard{
@@ -172,7 +188,6 @@ margin-top: 5rem;
   max-width: auto;
   justify-content: center;
   vertical-align: middle;
-  background-color: red;
 }
 
 .iconText {
@@ -257,3 +272,14 @@ margin-top: 5rem;
       justify-content: center;
     }
 
+
+    
+    @keyframes GradientAnimation {
+      0% { background-position: 0% 50% }
+      50% { background-position: 100% 50% }
+      100% { background-position: 0% 50% }
+    }
+
+    .animate__animated.animate__fadeIn {
+      --animate-duration: 6s;
+    }
