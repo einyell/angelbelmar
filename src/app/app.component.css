@@ -1,0 +1,36 @@
+.button {
+    border: 1px solid green;
+    font-size: 1.25rem;
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: fit-content;
+    padding: 0.5rem;
+    
+  }
+
+  .button a{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+  }
+
+  .button a:hover{
+    color: #44D629;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    transition: 1s;
+  }
+
+  .button:hover{
+    border: 1px solid white;
+    transition: 0.75s;
+  }
